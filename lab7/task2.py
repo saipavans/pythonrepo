@@ -16,7 +16,7 @@ class Point:
         distance = math.pow(((x_distance**2 + y_distance**2)),0.5)
         return distance
 
-    def add_with_time(self, other_point):
+    def add_with_point(self, other_point):
         new_x = self.x + other_point.x
         new_y = self.y + other_point.y
         return Point(new_x,new_y)
@@ -30,7 +30,7 @@ class Point:
         if isinstance(other, tuple):
             return self.add_with_offset(other)
         else:
-            return self.add_with_time(other)
+            return self.add_with_point(other)
 
 
 def main():
