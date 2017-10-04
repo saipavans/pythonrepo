@@ -8,7 +8,6 @@
 
 import sys
 import re
-import HTMLParser
 
 """Baby Names exercise
 
@@ -56,6 +55,7 @@ def extract_names(filename):
       line_list = replaced_line.split()
       res.append(str(line_list[1]) + " " + str(line_list[0]))
       res.append(str(line_list[2]) + " " + str(line_list[0]))
+  res.sort()
   return res
 
 
